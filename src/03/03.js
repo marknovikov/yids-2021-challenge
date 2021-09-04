@@ -14,10 +14,12 @@ export const solution = (input) => {
       return true;
     }
 
-    parts
-      .filter((part) => part === input.substring(partStartIdx, partStartIdx + part.length))
-      .map((part) => () => nextPartStartIdxx.push(partStartIdx + part.length))
-      .map((f) => f());
+    for (const part of parts) {
+      const nextPartStartIdx = partStartIdx + part.length;
+      if (part === input.slice(partStartIdx, nextPartStartIdx)) {
+        nextPartStartIdxx.push(nextPartStartIdx);
+      }
+    }
   }
 
   return false;
