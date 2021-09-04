@@ -1,0 +1,22 @@
+{
+  "name": "yids-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_PATH=./src NODE_OPTIONS=--experimental-vm-modules jest --coverage --silent --maxWorkers=4",
+    "test:watch": "NODE_PATH=./src NODE_OPTIONS=--experimental-vm-modules jest --watch --maxWorkers=4",
+    "lint": "eslint --max-warnings 0 'src/**/*.{js,ts}'",
+    "lint:fix": "eslint --fix 'src/**/*.{js,ts}'"
+  },
+  "author": "Mark Novikov <marknovikov91@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
+    "jest": "^27.1.0"
+  }
+}
